@@ -14,7 +14,8 @@ body {
 
 .navigation {
   flex: 1;
-  border-right: 4px solid #ff517e;
+  /*border-right: 4px solid #ff517e;*/
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
   text-align: center;
   position: fixed;
   width: 110px;
@@ -131,6 +132,7 @@ body {
   padding: 15px 35px 10px 35px;
   border-radius: 40px;
   color: white;
+  cursor: pointer;
 }
 
 .buttons span:nth-child(2) {
@@ -138,10 +140,16 @@ body {
   padding: 15px 35px 10px 35px;
   border-radius: 40px;
   color: white;
+  cursor: pointer;
+}
+
+.buttons a {
+  text-decoration: none;
+  color: white;
 }
 
 .header-right img {
-  max-width: 500px;
+  max-width: 400px;
 }
 
 .about-me,
