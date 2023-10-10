@@ -161,10 +161,145 @@ body {
   max-width: 400px;
 }
 
-.about-me,
 .my-education,
 .my-projects,
 .contact {
   width: auto;
   height: 100vh;
+}
+
+.about-me {
+  display: flex;
+  background-color: #fafafa;
+  padding: 80px 10px 80px 10px;
+  gap: 3em;
+}
+
+.about-left {
+  flex: 1;
+  max-width: 600px;
+  padding: 0;
+  text-align: right;
+}
+
+.about-right {
+  flex: 1;
+  max-width: 700px;
+  padding: 0;
+}
+
+.about-right h2 {
+  border-bottom: 6px solid #ffc455;
+  line-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.about-right h2:hover {
+  border-bottom: 6px solid #ff517e;
+  line-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.about-right h1 {
+  color: #00c8da;
+  line-height: 48px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.about-right p {
+  color: #777777;
+  line-height: 1.5em;
+  margin-top: 0;
+}
+
+.about-right p:nth-child(4) {
+  color: #00c8da;
+  margin-bottom: 0;
+  font-size: 18px;
+  margin-top: 0;
+}
+.about-right p:nth-child(5) {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.about-left img {
+  max-width: 445px;
+  height: 489px;
+}
+
+.img-wrap {
+  position: relative;
+  max-width: 445px;
+  height: 488px;
+  display: inline-block;
+}
+
+.about-me-info {
+  background-color: #000000;
+  transition: all 0.5s;
+  position: absolute;
+  width: 100%;
+  height: 488px;
+  top: 0;
+  left: 0;
+  text-align: left;
+  color: #ffc455;
+  opacity: 0.8;
+}
+
+.about-more-info {
+  transition: 0.3s;
+  position: absolute;
+  font-size: 48px;
+  color: white;
+  background-color: #00c8da;
+  width: 60px;
+  text-align: center;
+  left: 0;
+  bottom: 0px;
+  cursor: pointer;
+}
+
+.close-info {
+  background-color: #ff517e;
+}
+
+.hidden {
+  display: none;
+}
+
+.about-me-info {
+  box-sizing: border-box;
+  padding-left: 26px;
+  padding-top: 10px;
+}
+
+.about-me-info-title h3 {
+  font-size: 22px;
+  color: #fafafa;
+  font-weight: normal;
+}
+
+.about-me-info-title p {
+  color: #939393;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.about-me-details {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.about-me-details p:nth-child(2n) {
+  color: white;
+  font-weight: 400;
 }
