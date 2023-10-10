@@ -11,3 +11,12 @@ btnPlus.addEventListener("click", function () {
     btnPlus.textContent = "-";
   }
 });
+
+function calcMyAge() {
+  return new Date().getFullYear() - 1990;
+}
+function setMyAge() {
+  const myAge = calcMyAge();
+  document.getElementById("myAge").textContent = myAge;
+}
+setMyAge();
