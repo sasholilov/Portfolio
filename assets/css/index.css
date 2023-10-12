@@ -160,7 +160,6 @@ body {
   max-width: 400px;
 }
 
-.my-projects,
 .contact {
   width: auto;
   height: 100vh;
@@ -326,7 +325,8 @@ body {
   color: #ff517e;
 }
 
-.my-education {
+.my-education,
+.my-projects {
   display: block;
   text-align: center;
 }
@@ -359,4 +359,86 @@ body {
 
 .my-education {
   padding: 80px 0;
+}
+
+.my-projects h1 {
+  margin: 0;
+  color: #556d91;
+  font-size: 32px;
+}
+
+.my-projects {
+  padding: 80px 0;
+  background-color: #f7fbff;
+}
+
+.my-projects h2 {
+  text-align: center;
+  border-bottom: 6px solid #ffc455;
+  line-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.my-projects h2:hover {
+  border-bottom: 6px solid #ff517e;
+  line-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: inline-block;
+  font-weight: 500;
+  text-align: center;
+}
+
+.projects-container {
+  max-width: 1160px;
+  margin: 30px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6em;
+  box-sizing: border-box;
+}
+
+.project-one {
+  position: relative;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.button-view {
+  transition: 10.3s;
+  position: absolute;
+  bottom: 1%;
+  left: 36%;
+  transform: translate(0, -50%);
+  background-color: #ff517e;
+  padding: 15px 35px 10px 35px;
+  border-radius: 40px;
+  color: white;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.button-view a {
+  text-decoration: none;
+  color: white;
+}
+
+.project-technologies {
+  display: flex;
+  position: absolute;
+  flex-wrap: wrap;
+  gap: 0.6em;
+  left: 6%;
+  top: 5%;
+}
+
+.project-technologies span {
+  color: #111111;
+  background-color: #ffc455;
+  border-radius: 10px;
+  padding: 5px 10px 5px 10px;
 }
