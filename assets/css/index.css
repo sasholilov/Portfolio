@@ -590,3 +590,13 @@ body {
   margin: 0;
   padding: 0;
 }
+#succes-sent {
+  position: absolute;
+  display: none;
+  margin: 0;
+  pad: 0;
+  color: green;
+  font-weight: bold;
+  left: 50%;
+  transform: translate(-25%);
+}

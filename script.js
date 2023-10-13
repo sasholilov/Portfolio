@@ -7,6 +7,46 @@ const prjTech = document
   .querySelector(".project-technologies")
   .querySelectorAll("span");
 
+const firstName = document.querySelector('input[id="firstName"]');
+const lastName = document.querySelector('input[id="lastName"]');
+const email = document.querySelector('input[id="email"]');
+const subject = document.querySelector('input[id="subject"]');
+const textMsg = document.querySelector("textarea");
+const succesMsg = document.getElementById("succes-sent");
+
+const msgObject = {
+  FirstName: firstName.value,
+  LastName: lastName.value,
+  FromEmail: email.value,
+  Subject: subject.value,
+  Message: textMsg.value,
+};
+
+document.getElementById("btnMsg").addEventListener("click", function () {
+  emailjs
+    .send("service_ov8ybw8", "template_7qypyl1", msgObject)
+    .then(
+      function (response) {
+        console.log("Email sent successfully", response);
+        succesMsg.style.display = "block";
+        setTimeout(function () {
+          succesMsg.style.display = "none";
+        }, 3500);
+      },
+      function (error) {
+        console.error("Error sending email", error);
+        alert("Възникна грешка в изпращането на писмото!");
+      }
+    )
+    .finally(() => {
+      firstName.value = "";
+      lastName.value = "";
+      email.value = "";
+      subject.value = "";
+      textMsg.value = "";
+    });
+});
+
 btnPlus.addEventListener("click", function () {
   cont.classList.remove("hidden");
   if (btnPlus.classList.contains("close-info")) {

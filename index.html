@@ -163,13 +163,14 @@
             <h1>Get In Touch</h1>
             <div class="contact-container">
             <div class="contact-form">
+              <p id="succes-sent">The message was sent successfully!</p>
               <div class="contact-form-input">
-                <input type="text" placeholder="First Name"/>
-                <input type="text" placeholder="Last Name"/>
-                <input type="email" placeholder="Email"/>
-                <input type="text" placeholder="Subject"/>
+                <input type="text" id="firstName" placeholder="First Name"/>
+                <input type="text" id="lastName" placeholder="Last Name"/>
+                <input type="email" id="email" placeholder="Email"/>
+                <input type="text" id="subject" placeholder="Subject"/>
                 <textarea placeholder="Message"></textarea>
-                <span>Send Message</span>
+                <span id="btnMsg">Send Message</span>
               </div>
             </div>
             <div class="contact-footer">
@@ -196,6 +197,16 @@
         </div>
       </div>
     </div>
-    <script src="/assets/js/script.js"></script>
+    <script src="script.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("AlFZdnIgV7H61ek1Q");
+   })();
+</script>
+
+
   </body>
 </html>
