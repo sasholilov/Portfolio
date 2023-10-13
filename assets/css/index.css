@@ -407,6 +407,10 @@ body {
   transition: 0.3s;
 }
 
+.project-one img {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
 .button-view {
   transition: 10.3s;
   position: absolute;
@@ -432,7 +436,7 @@ body {
   position: absolute;
   flex-wrap: wrap;
   gap: 0.6em;
-  left: 6%;
+  left: 5%;
   top: 5%;
 }
 
