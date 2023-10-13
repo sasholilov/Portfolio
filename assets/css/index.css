@@ -423,7 +423,7 @@ body {
   color: white;
   cursor: pointer;
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity 0.4s;
 }
 
 .button-view a {
