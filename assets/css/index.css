@@ -169,22 +169,21 @@ body {
   display: flex;
   background-color: #fafafa;
   padding: 80px 10px 80px 10px;
-  gap: 1em;
+  gap: 2em;
   justify-content: center;
 }
 
 .about-left {
-  flex: 1;
-  max-width: 500px;
+  flex-grow: 30%;
   padding: 0;
   text-align: center;
+  margin-left: 5em;
 }
 
 .about-right {
-  flex: 1;
   max-width: 700px;
   padding: 0;
-  margin-right: 10px;
+  margin-right: 10em;
 }
 
 .about-right h2 {
