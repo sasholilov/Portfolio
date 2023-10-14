@@ -23,28 +23,24 @@ const msgObject = {
 };
 
 document.getElementById("btnMsg").addEventListener("click", function () {
-  emailjs
-    .send("service_ov8ybw8", "template_7qypyl1", msgObject)
-    .then(
-      function (response) {
-        console.log("Email sent successfully", response);
-        succesMsg.style.display = "block";
-        setTimeout(function () {
-          succesMsg.style.display = "none";
-        }, 3500);
-      },
-      function (error) {
-        console.error("Error sending email", error);
-        alert("Възникна грешка в изпращането на писмото!");
-      }
-    )
-    .finally(() => {
-      firstName.value = "";
-      lastName.value = "";
-      email.value = "";
-      subject.value = "";
-      textMsg.value = "";
-    });
+  emailjs.send("service_ov8ybw8", "template_7qypyl1", msgObject).then(
+    function (response) {
+      console.log("Email sent successfully", response);
+      succesMsg.style.display = "block";
+      setTimeout(function () {
+        succesMsg.style.display = "none";
+      }, 3500);
+    },
+    function (error) {
+      console.error("Error sending email", error);
+      alert("Възникна грешка в изпращането на писмото!");
+    }
+  );
+  firstName.value = "";
+  lastName.value = "";
+  email.value = "";
+  subject.value = "";
+  textMsg.value = "";
 });
 
 btnPlus.addEventListener("click", function () {
