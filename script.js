@@ -23,24 +23,46 @@ const msgObject = {
 };
 
 document.getElementById("btnMsg").addEventListener("click", function () {
-  emailjs.send("service_ov8ybw8", "template_7qypyl1", msgObject).then(
-    function (response) {
-      console.log("Email sent successfully", response);
-      succesMsg.style.display = "block";
-      setTimeout(function () {
-        succesMsg.style.display = "none";
-      }, 3500);
-    },
-    function (error) {
-      console.error("Error sending email", error);
-      alert("Възникна грешка в изпращането на писмото!");
-    }
-  );
-  firstName.value = "";
-  lastName.value = "";
-  email.value = "";
-  subject.value = "";
-  textMsg.value = "";
+  // Проверете дали всички полета са попълнени
+  if (
+    firstName.value &&
+    lastName.value &&
+    email.value &&
+    subject.value &&
+    textMsg.value
+  ) {
+    const msgObject = {
+      FirstName: firstName.value,
+      LastName: lastName.value,
+      FromEmail: email.value,
+      Subject: subject.value,
+      Message: textMsg.value,
+    };
+
+    emailjs.send("service_ov8ybw8", "template_7qypyl1", msgObject).then(
+      function (response) {
+        console.log("Email sent successfully", response);
+        succesMsg.style.display = "block";
+        setTimeout(function () {
+          succesMsg.style.display = "none";
+        }, 3500);
+
+        // Занулете стойностите на полетата
+        firstName.value = "";
+        lastName.value = "";
+        email.value = "";
+        subject.value = "";
+        textMsg.value = "";
+      },
+      function (error) {
+        console.error("Error sending email", error);
+        alert("Възникна грешка в изпращането на писмото!");
+      }
+    );
+  } else {
+    // Ако има непопълнени полета, изведете съобщение или направете друга обработка
+    alert("Моля, попълнете всички полета преди да изпратите имейла.");
+  }
 });
 
 btnPlus.addEventListener("click", function () {
