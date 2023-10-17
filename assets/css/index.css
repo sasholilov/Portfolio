@@ -43,6 +43,17 @@ footer p {
 
 .navigation-items .about-nav {
   padding: 40px 0 40px 0;
+  position: relative;
+}
+
+.navigation-items .about-nav::after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  width: 80%;
+  height: 1px;
+  background-color: #cdcccc;
 }
 
 .navigation-items .about-nav:hover {
