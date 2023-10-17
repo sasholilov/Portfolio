@@ -35,6 +35,20 @@ footer p {
   left: 0;
 }
 
+.navigation-items {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.navigation-items .about-nav {
+  padding: 40px 0 40px 0;
+}
+
+.navigation-items .about-nav:hover {
+  background-color: #00c8da;
+}
+
 .content {
   flex: 12;
   margin-left: 110px;
