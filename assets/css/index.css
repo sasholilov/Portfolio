@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: rgb(255, 255, 255);
   font-family: "Josefin Sans", sans-serif;
@@ -38,12 +42,23 @@ footer p {
 .navigation-items {
   display: flex;
   flex-direction: column;
-  gap: 2em;
+}
+
+.navigation-items .avatar-img {
+  max-width: 62px;
+  cursor: pointer;
+}
+
+.navigation-items img {
+  max-width: 32px;
+  margin-top: 0;
 }
 
 .navigation-items .about-nav {
-  padding: 40px 0 40px 0;
   position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 20px 0 20px 0;
 }
 
 .navigation-items .about-nav::after {
@@ -53,11 +68,118 @@ footer p {
   right: 10px;
   width: 80%;
   height: 1px;
-  background-color: #cdcccc;
+  background-color: #e2e0e0;
 }
 
-.navigation-items .about-nav:hover {
-  background-color: #00c8da;
+.navigation-items .about-nav::before {
+  position: absolute;
+  content: attr(data-text);
+  bottom: -100%;
+  left: 30%;
+  font-size: 16px;
+  transition: bottom 0.4s;
+  color: #ff517e;
+}
+
+.navigation-items .about-nav:hover::before {
+  bottom: 2px;
+  left: 30%;
+}
+
+.navigation-items .education-nav {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0 0 20px 0;
+}
+
+.navigation-items .education-nav::after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  width: 80%;
+  height: 1px;
+  background-color: #e2e0e0;
+}
+
+.navigation-items .education-nav::before {
+  position: absolute;
+  content: attr(data-text);
+  bottom: -100%;
+  right: 50%;
+  transform: translate(50%, 0);
+  font-size: 16px;
+  transition: bottom 0.4s;
+  color: #556d91;
+}
+
+.navigation-items .education-nav:hover::before {
+  bottom: 2px;
+}
+
+.navigation-items .projects-nav {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0 0 20px 0;
+}
+
+.navigation-items .projects-nav::after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  width: 80%;
+  height: 1px;
+  background-color: #e2e0e0;
+}
+
+.navigation-items .projects-nav::before {
+  position: absolute;
+  content: attr(data-text);
+  bottom: -100%;
+  right: 50%;
+  transform: translate(50%, 0);
+  font-size: 16px;
+  transition: bottom 0.4s;
+  color: #00c8da;
+}
+
+.navigation-items .projects-nav:hover::before {
+  bottom: 2px;
+}
+
+.navigation-items .contact-nav {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0 0 20px 0;
+}
+
+.navigation-items .contact-nav::after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  width: 80%;
+  height: 1px;
+  background-color: #e2e0e0;
+}
+
+.navigation-items .contact-nav::before {
+  position: absolute;
+  content: attr(data-text);
+  bottom: -100%;
+  right: 50%;
+  transform: translate(50%, 0);
+  font-size: 16px;
+  transition: bottom 0.4s;
+  color: #ffc455;
+}
+
+.navigation-items .contact-nav:hover::before {
+  bottom: 2px;
 }
 
 .content {

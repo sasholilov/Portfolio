@@ -10,13 +10,14 @@
    
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="container">
       <div class="navigation">
         <div class="navigation-items">
-        <p class="avatar-nav">Avatar</p>
-        <p class="about-nav">About</p>
-        <p class="projects-nav">Projects</p>
-        <p class="contact-nav">Contact</p>
+        <a href="#container"><p class="avatar-nav"><img class="avatar-img" src="/assets/img/profile.png"></p></a>
+        <a href="#about-me"><p class="about-nav" data-text="About"><img src="/assets/img/about-icon.png"></p></a>
+        <a href="#my-education"><p class="education-nav" data-text="Education"><img src="/assets/img/education-icon.png"></p></a>
+        <a href="#my-projects"><p class="projects-nav" data-text="Projects"><img src="/assets/img/projects-icon.png"></p></a>
+        <a href="#contact"><p class="contact-nav" data-text="Contact"><img src="/assets/img/contact-icon.png"></p></a>
       </div>
       </div>
       <div class="content">
@@ -36,14 +37,17 @@
                   >Download CV</a
                 ></span
               >
-              <span>Send Message</span>
+              <span><a
+                href="#contact"
+                >Send Message</a
+              ></span>
             </div>
           </div>
           <div class="header-right">
             <img src="/assets/img/laptop.png" />
           </div>
         </div>
-        <div class="about-me">
+        <div class="about-me" id="about-me">
           <div class="about-left">
             <div class="img-wrap">
               <img src="/assets/img/selfintro.jpg" alt="self intro" />
@@ -105,7 +109,7 @@
             </div>
           </div>
         </div>
-        <div class="my-education">
+        <div class="my-education" id="my-education">
           <h2>Learning</h2>
           <h1>My Education</h1>
           <div class="timeline">
@@ -134,7 +138,7 @@
             </div>
             </div>
           </div> 
-          <div class="my-projects">
+          <div class="my-projects" id="my-projects">
             <h2>Quality Work</h2>
             <h1>My Projects</h1>
             <div class="projects-container">
@@ -152,7 +156,7 @@
               
             </div>
           </div>
-          <div class="contact">          
+          <div class="contact" id="contact">          
             <h2>Contact Me</h2>
             <h1>Get In Touch</h1>
             <div class="contact-container">
