@@ -42,6 +42,7 @@ footer p {
 .navigation-items {
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
 .navigation-items .avatar-img {
@@ -54,132 +55,128 @@ footer p {
   margin-top: 0;
 }
 
-.navigation-items .about-nav {
+.item1 {
   position: relative;
   overflow: hidden;
-  cursor: pointer;
-  padding: 20px 0 20px 0;
+  font-size: 12px;
 }
 
-.navigation-items .about-nav::after {
-  content: " ";
-  position: absolute;
-  bottom: 0;
-  right: 10px;
-  width: 80%;
-  height: 1px;
-  background-color: #e2e0e0;
-}
-
-.navigation-items .about-nav::before {
+.item1::before {
   position: absolute;
   content: attr(data-text);
   bottom: -100%;
-  left: 30%;
-  font-size: 16px;
   transition: bottom 0.4s;
   color: #ff517e;
+  right: 50%;
+  transform: translate(50%, 0);
 }
 
-.navigation-items .about-nav:hover::before {
-  bottom: 2px;
-  left: 30%;
+.item1:hover::before {
+  bottom: 0;
 }
 
-.navigation-items .education-nav {
+.item1::after {
+  position: absolute;
+  content: " ";
+  background-color: #e4e4e4;
+  height: 1px;
+  width: 80%;
+  bottom: 0;
+  right: 50%;
+  transform: translate(50%, 0);
+}
+
+.item2 {
   position: relative;
   overflow: hidden;
-  cursor: pointer;
-  padding: 0 0 20px 0;
+  font-size: 12px;
 }
 
-.navigation-items .education-nav::after {
-  content: " ";
-  position: absolute;
-  bottom: 0;
-  right: 10px;
-  width: 80%;
-  height: 1px;
-  background-color: #e2e0e0;
-}
-
-.navigation-items .education-nav::before {
+.item2::before {
   position: absolute;
   content: attr(data-text);
   bottom: -100%;
-  right: 50%;
-  transform: translate(50%, 0);
-  font-size: 16px;
   transition: bottom 0.4s;
   color: #556d91;
+  right: 50%;
+  transform: translate(50%, 0);
 }
 
-.navigation-items .education-nav:hover::before {
-  bottom: 2px;
+.item2:hover::before {
+  bottom: 0;
 }
 
-.navigation-items .projects-nav {
+.item2::after {
+  position: absolute;
+  content: " ";
+  background-color: #e4e4e4;
+  height: 1px;
+  width: 80%;
+  bottom: 0;
+  right: 50%;
+  transform: translate(50%, 0);
+}
+
+.item3 {
   position: relative;
   overflow: hidden;
-  cursor: pointer;
-  padding: 0 0 20px 0;
+  font-size: 12px;
 }
 
-.navigation-items .projects-nav::after {
-  content: " ";
-  position: absolute;
-  bottom: 0;
-  right: 10px;
-  width: 80%;
-  height: 1px;
-  background-color: #e2e0e0;
-}
-
-.navigation-items .projects-nav::before {
+.item3::before {
   position: absolute;
   content: attr(data-text);
   bottom: -100%;
-  right: 50%;
-  transform: translate(50%, 0);
-  font-size: 16px;
   transition: bottom 0.4s;
   color: #00c8da;
+  right: 50%;
+  transform: translate(50%, 0);
 }
 
-.navigation-items .projects-nav:hover::before {
-  bottom: 2px;
+.item3:hover::before {
+  bottom: 0;
 }
 
-.navigation-items .contact-nav {
+.item3::after {
+  position: absolute;
+  content: " ";
+  background-color: #e4e4e4;
+  height: 1px;
+  width: 80%;
+  bottom: 0;
+  right: 50%;
+  transform: translate(50%, 0);
+}
+
+.item4 {
   position: relative;
   overflow: hidden;
-  cursor: pointer;
-  padding: 0 0 20px 0;
+  font-size: 12px;
 }
 
-.navigation-items .contact-nav::after {
-  content: " ";
-  position: absolute;
-  bottom: 0;
-  right: 10px;
-  width: 80%;
-  height: 1px;
-  background-color: #e2e0e0;
-}
-
-.navigation-items .contact-nav::before {
+.item4::before {
   position: absolute;
   content: attr(data-text);
   bottom: -100%;
-  right: 50%;
-  transform: translate(50%, 0);
-  font-size: 16px;
   transition: bottom 0.4s;
   color: #ffc455;
+  right: 50%;
+  transform: translate(50%, 0);
 }
 
-.navigation-items .contact-nav:hover::before {
-  bottom: 2px;
+.item4:hover::before {
+  bottom: 0;
+}
+
+.item4::after {
+  position: absolute;
+  content: " ";
+  background-color: #e4e4e4;
+  height: 1px;
+  width: 80%;
+  bottom: 0;
+  right: 50%;
+  transform: translate(50%, 0);
 }
 
 .content {
@@ -201,10 +198,12 @@ footer p {
   0% {
     background-position: 0% 0%;
   }
+
   100% {
     background-position: 100% 100%;
   }
 }
+
 .header-left {
   margin-top: 33vh;
   flex: 2;
@@ -256,6 +255,7 @@ footer p {
   flex-direction: row;
   height: 40px;
 }
+
 .border-left {
   margin-top: 0;
   border-left: 3px solid #ffc455;
@@ -264,6 +264,7 @@ footer p {
   display: inline-block;
   animation: blink 1s infinite;
 }
+
 @keyframes blink {
   0% {
     opacity: 0;
@@ -302,6 +303,7 @@ footer p {
 .buttons span:first-child:hover {
   background-color: #ff517e;
 }
+
 .buttons span:last-child:hover {
   background-color: #ffc455;
 }
@@ -382,6 +384,7 @@ footer p {
   font-size: 18px;
   margin-top: 0;
 }
+
 .about-right p:nth-child(5) {
   margin-top: 0;
   font-size: 18px;
@@ -479,6 +482,7 @@ footer p {
   transition: 0.3s;
   cursor: pointer;
 }
+
 .about-me-social i:hover {
   color: #ff517e;
 }
@@ -733,6 +737,7 @@ footer p {
   margin-bottom: 10px;
   font-weight: 700;
 }
+
 .footer-heading::after {
   content: " ";
   position: absolute;
@@ -750,6 +755,7 @@ footer p {
   margin: 0;
   padding: 0;
 }
+
 #succes-sent {
   position: absolute;
   display: none;
