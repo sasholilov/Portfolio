@@ -24,6 +24,7 @@ const email = document.querySelector('input[id="email"]');
 const subject = document.querySelector('input[id="subject"]');
 const textMsg = document.querySelector("textarea");
 const succesMsg = document.getElementById("succes-sent");
+const errorMsg = document.getElementById("error-message");
 const msgObject = {
   FirstName: firstName.value,
   LastName: lastName.value,
@@ -70,7 +71,7 @@ document.getElementById("btnMsg").addEventListener("click", function () {
     );
   } else {
     // Ако има непопълнени полета, изведете съобщение или направете друга обработка
-    alert("Моля, попълнете всички полета преди да изпратите имейла.");
+    errorMsg.style.display = "block";
   }
 });
 
