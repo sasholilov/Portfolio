@@ -203,4 +203,26 @@
   .project-one {
     margin-top: 1em;
   }
+
+  #error-message {
+    position: absolute;
+    display: none;
+    margin: 0;
+    pad: 0;
+    color: red;
+    font-weight: bold;
+    left: 50%;
+    transform: translate(-25%);
+  }
+
+  #error-message {
+    position: absolute;
+    display: none;
+    margin: 0;
+    pad: 0;
+    color: red;
+    font-weight: bold;
+    left: 50%;
+    transform: translate(-50%);
+  }
 }
