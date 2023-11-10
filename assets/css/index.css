@@ -460,6 +460,7 @@ footer p {
   cursor: pointer;
   opacity: 0;
   transition: opacity 0.3s;
+  border: none;
 }
 
 .button-view a {
