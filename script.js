@@ -87,10 +87,6 @@ btnPlus.addEventListener("click", function () {
   }
 });
 
-function openResourceCV(url) {
-  window.open(url, "_blank");
-}
-
 projectOne.addEventListener("mouseout", function () {
   prjTechOne.forEach((e) => {
     e.style.display = "flex";
