@@ -2,20 +2,31 @@ const btnPlus = document.querySelector(".about-more-info");
 const cont = document.querySelector(".about-me-info");
 const projectOne = document.getElementById("project-one");
 const projectTwo = document.getElementById("project-two");
+const projectThree = document.getElementById("project-three");
 const btnViewOne = document
   .getElementById("project-one")
   .querySelector(".button-view");
 const btnViewTwo = document
   .getElementById("project-two")
   .querySelector(".button-view");
+const btnViewThree = document
+  .getElementById("project-three")
+  .querySelector(".button-view");
 const imgElOne = document.getElementById("project-one").querySelector("img");
 const imgElTwo = document.getElementById("project-two").querySelector("img");
+const imgElThree = document
+  .getElementById("project-three")
+  .querySelector("img");
 const prjTechOne = document
   .getElementById("project-one")
   .querySelector(".project-technologies")
   .querySelectorAll("span");
 const prjTechTwo = document
   .getElementById("project-two")
+  .querySelector(".project-technologies")
+  .querySelectorAll("span");
+const prjTechThree = document
+  .getElementById("project-three")
   .querySelector(".project-technologies")
   .querySelectorAll("span");
 const firstName = document.querySelector('input[id="firstName"]');
@@ -158,6 +169,42 @@ btnViewTwo.addEventListener("mouseover", function () {
 });
 
 //-----------------//
+
+projectThree.addEventListener("mouseout", function () {
+  prjTechThree.forEach((e) => {
+    e.style.display = "flex";
+  });
+  btnViewThree.style.opacity = "0";
+  imgElThree.style.opacity = "1";
+  if (imgElThree.style.opacity === "1") {
+    btnViewThree.style.opacity = "0";
+  }
+});
+
+projectThree.addEventListener("mouseover", function () {
+  prjTechThree.forEach((e) => {
+    e.style.display = "none";
+  });
+  if (imgElThree.style.opacity === "1") {
+    btnViewThree.style.opacity = "0";
+  }
+  setTimeout(function () {
+    btnViewThree.style.opacity = "1";
+  }, 200);
+  projectThree.style.transition = "0.3s";
+  projectThree.position = "relative";
+  imgElThree.style.opacity = "0.7";
+});
+
+btnViewThree.addEventListener("mouseover", function () {
+  if (imgElThree.style.opacity === "1") {
+    btnViewThree.style.opacity = "0";
+  }
+  imgElThree.style.opacity = "0.7";
+  btnViewThree.style.opacity = "1";
+});
+
+//-----------------------------//
 
 function calcMyAge() {
   return new Date().getFullYear() - 1990;
