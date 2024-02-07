@@ -157,7 +157,7 @@ footer p {
   margin-top: 30px;
 }
 
-.buttons button:first-child {
+.buttons a button:first-child {
   background-color: #ffc455;
   padding: 15px 35px 10px 35px;
   border-radius: 40px;
@@ -169,15 +169,15 @@ footer p {
   font-size: 16px;
 }
 
-.buttons button:first-child:hover {
+.buttons a button:first-child:hover {
   background-color: #ff517e;
 }
 
-.buttons button:last-child:hover {
+.buttons a:last-child:hover button {
   background-color: #ffc455;
 }
 
-.buttons button:last-child {
+.buttons a:last-child button {
   background-color: #ff517e;
   padding: 15px 35px 10px 35px;
   border-radius: 40px;
