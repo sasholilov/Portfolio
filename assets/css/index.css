@@ -251,12 +251,12 @@ footer p {
   margin-top: 0;
 }
 
-.front-end-title {
+/* .about-right p:nth-child(4) {
   color: #00c8da;
   margin-bottom: 0;
   font-size: 18px;
   margin-top: 0;
-}
+} */
 
 .about-right p:nth-child(5) {
   margin-top: 0;
