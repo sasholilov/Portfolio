@@ -256,6 +256,7 @@ footer p {
   margin-bottom: 0;
   font-size: 18px;
   margin-top: 0;
+  background-color: red;
 }
 
 .about-right p:nth-child(5) {
