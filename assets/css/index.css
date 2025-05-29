@@ -251,7 +251,7 @@ footer p {
   margin-top: 0;
 }
 
-.about-right p:nth-child(4) {
+.about-right p:nth-child(4):not(.about-me-text) {
   color: #00c8da;
   margin-bottom: 0;
   font-size: 18px;
