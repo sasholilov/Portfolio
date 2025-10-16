@@ -183,6 +183,12 @@
   }
 
   .my-projects img {
+    object-fit: contain;
+    max-width: 340px;
+    height: 340px;
+  }
+
+  #project-visestate img {
     max-width: 340px;
   }
 
