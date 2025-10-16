@@ -438,8 +438,14 @@ footer p {
   position: relative;
 }
 
-.project img {
+.project:hover {
+  transform: scale(1.025);
+  opacity: 0.9;
+}
+
+.project {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+  transition: all 0.3s ease-in-out;
 }
 
 .button-view {
