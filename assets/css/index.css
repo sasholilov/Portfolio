@@ -354,13 +354,15 @@ footer p {
 }
 
 .my-education,
+.my-experience,
 .my-projects,
 .contact {
   display: block;
   text-align: center;
 }
 
-.my-education h2 {
+.my-education h2,
+.my-experience h2 {
   text-align: center;
   border-bottom: 6px solid #ffc455;
   line-height: 1px;
@@ -370,7 +372,8 @@ footer p {
   font-weight: 500;
 }
 
-.my-education h2:hover {
+.my-education h2:hover,
+.my-experience h2:hover {
   border-bottom: 6px solid #ff517e;
   line-height: 1px;
   padding-left: 10px;
@@ -380,14 +383,20 @@ footer p {
   text-align: center;
 }
 
-.my-education h1 {
+.my-education h1,
+.my-experience h1 {
   margin: 0;
   color: #556d91;
   font-size: 32px;
 }
 
-.my-education {
+.my-education,
+.my-experience {
   padding: 80px 0;
+}
+
+#my-experience {
+  background-color: #fafafa;
 }
 
 .my-projects h1 {
