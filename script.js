@@ -37,8 +37,6 @@ document.getElementById("btnMsg").addEventListener("click", function () {
         setTimeout(function () {
           succesMsg.style.display = "none";
         }, 3500);
-
-        // Занулете стойностите на полетата
         firstName.value = "";
         lastName.value = "";
         email.value = "";
@@ -51,7 +49,6 @@ document.getElementById("btnMsg").addEventListener("click", function () {
       }
     );
   } else {
-    // Ако има непопълнени полета, изведете съобщение или направете друга обработка
     errorMsg.style.display = "block";
   }
 });
